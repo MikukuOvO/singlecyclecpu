@@ -1,5 +1,8 @@
 # cod-singlecyclecpu
-
+# 这是武汉大学计算机学院计算机组成与设计课程设计的一部分
+# RISC-V 单周期实现
+# Yili Gong
+# 2023.05
 
 
 ## Getting started
