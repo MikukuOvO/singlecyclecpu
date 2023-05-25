@@ -11,6 +11,7 @@ module xgriscv_tb();
    integer counter = 0;
    
    initial begin
+      // input instruction for simulation
       $readmemh("riscv32_sim1.dat", xgriscv.U_imem.RAM);
       clk = 1;
       rstn = 1;
@@ -24,12 +25,10 @@ module xgriscv_tb();
       if (clk == 1'b1) 
       begin
          counter = counter + 1;
-         //comment out the display line(s) for online judge
-         //$display("pc:\t\t%h", pc);
+         //comment out all display line(s) for online judge
          if (pc == 32'h80000078) // set to the address of the last instruction
           begin
-            //$display("pc:\t\t%h", pc);
-            //$finish;
+
             $stop;
           end
       end
